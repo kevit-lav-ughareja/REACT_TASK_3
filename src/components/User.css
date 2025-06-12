@@ -1,0 +1,53 @@
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.02);
+}
+
+.user-card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-card strong {
+  color: #2a6f97;
+}
+.btn-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.insert-btn {
+  width: 180px;
+  height: 45px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.insert-btn:hover {
+  background-color: #0056b3;
+}
