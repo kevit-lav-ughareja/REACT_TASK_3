@@ -14,9 +14,6 @@ function Product() {
   const [visibleProducts, setVisibleProducts] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const itemsPerLoad = 5;
-  /*  const [page, setPage] = useState(1); */
-  /*   const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setpostPerPage] = useState(5); */
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products`)
@@ -53,7 +50,6 @@ function Product() {
 
     setVisibleProducts([...visibleProducts, ...moreItems]);
 
-    // Stop loading more if we've reached the end
     if (visibleProducts.length + moreItems.length >= filteredPosts.length) {
       setHasMore(false);
     }
@@ -61,10 +57,6 @@ function Product() {
 
   if (!filteredPosts) return <p>Loading....</p>;
 
-  /* fetchMoreData = () => {}; */
-  /*  const lastPostInde = currentPage * postPerPage;
-  const firstPostIndex = lastPostInde - postPerPage;
-  const currentPost = filteredPosts.slice(firstPostIndex, lastPostInde); */
   return (
     <>
       <div className="filter-container">
@@ -119,11 +111,6 @@ function Product() {
             </div>
           ))}
         </div>
-        {/*   <Pagination
-        totalPosts={filteredPosts.length}
-        postPerPage={postPerPage}
-        setCurrentPage={setCurrentPage}
-      /> */}
       </InfiniteScroll>
     </>
   );
