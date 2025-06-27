@@ -47,7 +47,7 @@ const CheckOut = () => {
           {isActive ? (
             <div>
               <h3>Total Amount: ${totalAmount.toFixed(2)}</h3>
-              <h2>✅ Thank you for shopping with us!</h2>
+              <h2>Thank you for shopping with us!</h2>
 
               <button className="finish-btn" onClick={handleFinish}>
                 Finish

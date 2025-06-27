@@ -12,8 +12,7 @@ const AddToCart = () => {
   );
 
   const dispatch = useDispatch();
-  const tax = totalAmount * 0.1;
-  const grandTotal = totalAmount + tax;
+
   return (
     <>
       <div className="cart-container">
